@@ -10,7 +10,6 @@ class Node:
         return self.next
     def set_next(self,next):
         self.next = next
-
 headnode= Node("kavaskar")
 print(headnode.get_data())
     
