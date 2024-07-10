@@ -1,0 +1,67 @@
+<html>
+<head>
+   <title>Wave Background using CSS</title>
+   <link rel="stylesheet" href="style.css">
+   <style>
+      body {
+         overflow: hidden;
+         margin: 0;
+         padding: 0;
+         background-color: rgb(233, 246, 252);
+      }
+      #waves {
+         position: relative;
+         height: 70px;
+         width: 100%;
+         background: green;
+         transform: scale(1, 1);
+         z-index: 1;
+      }
+      #waves:before {
+         content: "";
+         position: absolute;
+         border-radius: 100%;
+         width: 100%;
+         height: 18rem;
+         background-color: rgb(233, 246, 252);
+         right: -35%;
+         top: 30px;
+      } #waves:after {
+         content: "";
+         position: absolute;
+         border-radius: 100%;
+         width: 100%;
+         height: 18rem;
+         background-color: green;
+         left: -30%;
+         top: -185px;
+      }
+       .main{
+         z-index: 999;
+         position: fixed;
+         width: 100%;
+         height: 100vh;
+         text-align: center;
+         color: green;
+         font-weight: 900;
+         font-size: 5vw;
+         font-family: 'Segoe UI';
+         top: 1;
+      }
+      p{
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         text-align: center;
+      }
+      
+   </style>
+</head>
+<body>
+   <div id="waves">
+   </div>
+   <div class="main">
+      <p>tutorialspoint.com</p>
+   </div>
+</body>
+</html>
