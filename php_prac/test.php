@@ -7,7 +7,14 @@
 </head>
 <body>
     <?php 
-    echo "hello world heheheheheh"
+    $name = "kavaskar";
+    $role = "trying to became a software developer soo hard and with the passion";
+    echo "hello world heheheheheh";
+    echo "<h1>my name is " . $name . ". I am ". $role . "and i am a student</h1>";
+
+
     ?>
+    <h1><?php echo "my name is " . $name . ". I am ". $role . "and i am a student"; ?></h1>
+
 </body>
 </html>
