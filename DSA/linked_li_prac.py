@@ -13,3 +13,4 @@ class Node:
 headnode= Node("kavaskar")
 print(headnode.get_data())
     
+test
