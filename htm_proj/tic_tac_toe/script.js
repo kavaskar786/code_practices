@@ -1,7 +1,7 @@
         let y=0
                         let mat = [ [0,1,2],
                             [3,4,5],
-                            [6,7,8]] ;
+    [6, 7, 8]];
         function change(row,col) {
                 let cells = document.querySelectorAll(".cell");
                 x= mat[row][col];
