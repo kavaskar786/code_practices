@@ -12,4 +12,3 @@ class Node:
         self.next = next
 headnode= Node("kavaskar")
 print(headnode.get_data())
-    
