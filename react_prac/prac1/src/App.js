@@ -49,32 +49,59 @@
 // export default App
 
 
-import React from 'react';
-import { useState } from 'react';
+// import React from 'react';
+// import { useState } from 'react';
 
-const Movies = () => {
-  const [movies, setMovies] = useState([{ id: 1, title: "singam", ratings: 8 }, { id: 2, title: "singam2", ratings: 7 }]);
-  const handleClick = () => {
-    setMovies(movies.map((m)=>(m.id === 1?{...m,title:"singam3"}:m)))
+// const Movies = () => {
+//   const [movies, setMovies] = useState([{ id: 1, title: "singam", ratings: 8 }, { id: 2, title: "singam2", ratings: 7 }]);
+//   const handleClick = () => {
+//     setMovies(movies.map((m)=>(m.id === 1?{...m,title:"singam3"}:m)))
+//   }
+//   return (
+//     <div>
+
+//       <h1>movies</h1>
+//       {movies.map((m) => (
+//         <ul>
+//           <li key={m.id}>{m.title}</li>
+//           <li key={m.id}>{m.ratings}</li>
+//         </ul>
+//       ))}
+//       <button onClick={handleClick}>change the name</button>
+//     </div>
+//   );
+// }
+// const App = () => {
+//   return (
+//     <div>
+//       <Movies />
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+import React from 'react'
+import { useState } from 'react'
+
+const App = () => {
+  const [name, setName] = useState("");
+  const handleChange = (e) => {
+    setName(e.target.value);
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`you have typed ${name} in the input`);
+    setName("");
   }
   return (
     <div>
-
-      <h1>movies</h1>
-      {movies.map((m) => (
-        <ul>
-          <li key={m.id}>{m.title}</li>
-          <li key={m.id}>{m.ratings}</li>
-        </ul>
-      ))}
-      <button onClick={handleClick}>change the name</button>
-    </div>
-  );
-}
-const App = () => {
-  return (
-    <div>
-      <Movies />
+      <h1>This is the form</h1>
+      <form onSubmit={handleSubmit}>
+        <input type="text" onChange={handleChange} value={name} />
+        <button>Submit</button>
+      </form>
     </div>
   )
 }
