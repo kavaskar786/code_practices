@@ -1,4 +1,5 @@
-import Counter from "./components/Counter"
+import Counter from "./components/Counter";
+import "./styles/styles.css"
 const App = () => {
   return (
     <div>
