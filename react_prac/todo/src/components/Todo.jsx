@@ -125,32 +125,114 @@
 // export default Todo;
 
 
-import React from 'react'
-import { useState } from 'react'
+// import React from 'react'
+// import { useState } from 'react'
 
-const Todo = () => {
-  const [todos, setTodos] = useState([]);
-  const [input, setInput] = useState("");
-  const handlechange = (e) => {
-    setInput(e.target.value);
-  }
+// const Todo = () => {
+//   const [todos, setTodos] = useState([]);
+//   const [input, setInput] = useState("");
+//   const [isMark, setIsMark] = useState(false);
+//   const handlechange = (e) => {
+//     setInput(e.target.value);
+//   }
 
-  const handleSubmit = () => {
-    setTodos((prev)=>
-      [...prev, {
-        id: todos.length + 1,
-        title:input,
-      }]
-    );
-    setInput("");
-  }
+//   const handleSubmit = () => {
+//     setTodos((prev)=>
+//       [...prev, {
+//         id: todos.length + 1,
+//         title: input,
+//         completed : false
+//       }]
+//     );
+//     setInput("");
+//   }
+
+//   const handleRemove = (id) => {
+//     setTodos(
+//       (prev) => prev.filter((t) => t.id !== id)
+//     )
+//   };
+
+//   const handleMark = (id) => {
+//     setTodos(
+//       (prev) => prev.map((x) => (
+//         x.id === id ? x.completed === false ? { ...x, completed: true }: { ...x, completed: false } : x
+//       )));
+//       setIsMark(!isMark);
+//   }
+
+//   return (
+//     <div className="container">
+//       <ul className="list-task">
+//         {todos.map(({ id, title, completed},i) => (
+//           <li key={id}>{`${i}. ${title} , ${completed}`}
+//             <button className="rm-btn" onClick={() => handleRemove(id)}>X</button>
+//             <button className="markcmpbtn" onClick={() => handleMark(id)}>{ isMark ? 'redo' : 'MarkAsCompleted' }</button>
+//           </li>
+//         ))}
+//       </ul>
+//       <input type="text" value={input} onChange={handlechange} className="usr_input" />
+//       <button className="sbt-button" onClick={handleSubmit}>Submit</button>
+//     </div>
+//   )
+// }
+
+// export default Todo
+
+import React, { useState } from "react";
+
+
+function App() {
+  const [task, setTask] = useState("");
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = () => {
+    if (task) {
+      setTasks([...tasks, { text: task, completed: false }]);
+      setTask("");
+    }
+  };
+
+  const toggleCompletion = (index) => {
+    const newTasks = [...tasks];
+    newTasks[index].completed = !newTasks[index].completed;
+    setTasks(newTasks);
+  };
+
+  const deleteTask = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  };
 
   return (
-    <div className="container">
-      <input type="text" value={input} onChange={handlechange} className="usr_input" />
-      <button className="sbt-button" onClick={handleSubmit}>Submit</button>
+    <div className="App">
+      <h1>Simple To-Do List</h1>
+      <div className="input-section">
+        <input
+          type="text"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          placeholder="Add a new task"
+        />
+        <button onClick={addTask}>Add</button>
+      </div>
+      <ul>
+        {tasks.map((task, ind) => (
+          
+          <li key={ind} className={task.completed ? "completed" : ""}>
+            {task.text}
+            {console.log(ind)}
+            <div className="actions">
+              <button onClick={() => toggleCompletion(ind)}>
+                {task.completed ? "Undo" : "Complete"}
+              </button>
+              <button onClick={() => deleteTask(ind)}>Delete</button>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
 
-export default Todo
+export default App;
