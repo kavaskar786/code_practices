@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  height: 100vh;
+  width: 90%;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  -webkit-transition: all 700ms ease-in;
+  /* background-color: #000; */
+}
+.card1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  /* flex: 10; */
+  background-size: cover;
+  height: 80vh;
+  /* width: 118.5vh; */
+  width: 90px;
+  border-radius: 50px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+.card2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  /* flex: 10; */
+  background-size: cover;
+  height: 80vh;
+  width: 90px;
+  border-radius: 50px;
+  /* flex: 5; */
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+.card3 {
+  background-position: center;
+  background-repeat: no-repeat;
+  /* flex: 10; */
+  background-size: cover;
+  height: 80vh;
+  width: 90px;
+  border-radius: 50px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+.card4 {
+  background-position: center;
+  background-repeat: no-repeat;
+  /* flex: 10; */
+  background-size: cover;
+  height: 80vh;
+  width: 90px;
+  border-radius: 50px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+.card5 {
+  background-position: center;
+  background-repeat: no-repeat;
+  /* flex: 10; */
+  background-size: cover;
+  height: 80vh;
+  width: 90px;
+  border-radius: 50px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+/* .title {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left: 20px;
+  bottom: 20px;
+  font-size: 2rem;
+  display: none;
+} */
