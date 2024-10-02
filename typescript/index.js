@@ -1,5 +1,5 @@
 "use strict";
 const person = {
-    name: "kavaskar",
+  name: "kavaskar",
 };
 console.log(person.name);
