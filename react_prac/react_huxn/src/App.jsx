@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Main from "./components/main";
 import Satus from "./components/Satus";
+import StyleCard from "./components/StyleCard";
 import Weather from "./components/Weather";
 
 // export default App;
@@ -24,6 +25,7 @@ function App() {
       <Satus isLoggedIn={true} isAdmin />
       <Weather temperature={23} />
       <Header />
+      <StyleCard />
       <Main />
       <Footer />
     </div>
