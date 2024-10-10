@@ -2,12 +2,15 @@
 //   return <section>hello 😁😁</section>;
 // };
 
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./components/main";
-import Satus from "./components/Satus";
-import StyleCard from "./components/StyleCard";
-import Weather from "./components/Weather";
+import FetchFromApi from "./components/FetchFromApi";
+import JustTest from "./components/JustTest";
+
+// import Footer from "./components/Footer";
+// import Header from "./components/Header";
+// import Main from "./components/main";
+// import Satus from "./components/Satus";
+// import StyleCard from "./components/StyleCard";
+// import Weather from "./components/Weather";
 
 // export default App;
 
@@ -22,12 +25,14 @@ import Weather from "./components/Weather";
 function App() {
   return (
     <div>
-      <Satus isLoggedIn={true} isAdmin />
+      <JustTest name="kavaskar" name2="likitha" />
+      {/* <FetchFromApi /> */}
+      {/* <Satus isLoggedIn={true} isAdmin />
       <Weather temperature={23} />
       <Header />
       <StyleCard />
       <Main />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
