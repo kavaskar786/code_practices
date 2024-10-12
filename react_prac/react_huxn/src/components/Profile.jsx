@@ -4,7 +4,10 @@ const Profile = () => {
   const [info, setInfo] = useState({ name: "", age: "" });
   //   const [name, SetName] = useState("");
   //   const [age, SetAge] = useState("");
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInfo((prev) => ({ ...prev, [name]: value }));
+  };
   const handleSubmit = () => {};
   return (
     <div>
