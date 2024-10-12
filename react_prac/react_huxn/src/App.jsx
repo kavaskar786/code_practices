@@ -2,7 +2,9 @@
 //   return <section>hello 😁😁</section>;
 // };
 
-import CopyInput from "./components/CopyInput";
+import FetchPrac from "./components/FetchPrac";
+
+// import CopyInput from "./components/CopyInput";
 
 // import Counter from "./components/Counter";
 // import Profile from "./components/Profile";
@@ -33,7 +35,8 @@ import CopyInput from "./components/CopyInput";
 function App() {
   return (
     <div>
-      <CopyInput />
+      <FetchPrac />
+      {/* <CopyInput /> */}
       {/* <ShopingList />
       <Profile />
       <Todo />
