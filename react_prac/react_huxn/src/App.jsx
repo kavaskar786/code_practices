@@ -2,8 +2,12 @@
 //   return <section>hello 😁😁</section>;
 // };
 
-import Counter from "./components/Counter";
-import Todo from "./components/Todo";
+import CopyInput from "./components/CopyInput";
+
+// import Counter from "./components/Counter";
+// import Profile from "./components/Profile";
+// import ShopingList from "./components/ShopingList";
+// import Todo from "./components/Todo";
 // import LocalStore from "./components/LocalStore";
 
 // import FetchFromApi from "./components/FetchFromApi";
@@ -29,8 +33,11 @@ import Todo from "./components/Todo";
 function App() {
   return (
     <div>
+      <CopyInput />
+      {/* <ShopingList />
+      <Profile />
       <Todo />
-      <Counter />
+      <Counter /> */}
       {/* <LocalStore /> */}
       {/* <JustTest name="kavaskar" name2="likitha" /> */}
       {/* <FetchFromApi /> */}
