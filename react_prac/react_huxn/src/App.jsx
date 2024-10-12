@@ -2,8 +2,12 @@
 //   return <section>hello 😁😁</section>;
 // };
 
-import FetchFromApi from "./components/FetchFromApi";
-import JustTest from "./components/JustTest";
+import Counter from "./components/Counter";
+import Todo from "./components/Todo";
+// import LocalStore from "./components/LocalStore";
+
+// import FetchFromApi from "./components/FetchFromApi";
+// import JustTest from "./components/JustTest";
 
 // import Footer from "./components/Footer";
 // import Header from "./components/Header";
@@ -25,7 +29,10 @@ import JustTest from "./components/JustTest";
 function App() {
   return (
     <div>
-      <JustTest name="kavaskar" name2="likitha" />
+      <Todo />
+      <Counter />
+      {/* <LocalStore /> */}
+      {/* <JustTest name="kavaskar" name2="likitha" /> */}
       {/* <FetchFromApi /> */}
       {/* <Satus isLoggedIn={true} isAdmin />
       <Weather temperature={23} />
