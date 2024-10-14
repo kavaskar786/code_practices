@@ -2,9 +2,11 @@
 //   return <section>hello 😁😁</section>;
 // };
 
-import UpdateProfile from "./components/UpdateProfile";
-import UserProfile from "./components/UserProfile";
-import UserProvider from "./components/UserProvider";
+import CountReducer from "./components/CountReducer";
+import Test from "./components/Test";
+
+// import UserProfile from "./components/UserProfile";
+// import UserProvider from "./components/UserProvider";
 
 // import PropDrilling1 from "./components/PropDrilling1";
 // import { createContext } from "react";
@@ -48,9 +50,11 @@ function App() {
   // const age = 22;
   return (
     <div>
-      <UserProvider>
+      <Test />
+      <CountReducer />
+      {/* <UserProvider>
         <UserProfile />
-      </UserProvider>
+      </UserProvider> */}
       {/* <Data.Provider value={{ name1: name, name2: name2 }}>
         <Data1.Provider value={age}>
           <PropDrilling1 />
