@@ -1,9 +1,14 @@
-import Counter from "./components/Counter";
+import TaskProvider from "./context/TaskContext";
+import Counter from "./pages/Counter";
+import Todo from "./pages/Todo";
 
 const App = () => {
   return (
-    <div>
+    <div className="font-sans	">
       <Counter />
+      <TaskProvider>
+        <Todo />
+      </TaskProvider>
     </div>
   );
 };
