@@ -6,7 +6,6 @@ const Background = () => {
 
   return (
     <div className="h-lvh  bg-white dark:bg-black ">
-      <div className="h-16 w-16 bg-white dark:bg-black"></div>
       <Button text="change theme" onClick={toggleMode} />
     </div>
   );
