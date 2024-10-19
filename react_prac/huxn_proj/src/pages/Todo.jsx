@@ -40,7 +40,7 @@ const Todo = () => {
     saveTask("tasks", todos);
   }, [todos]);
   return (
-    <div className="h-lvh bg-gradient-to-r from-purple-500 to-pink-500">
+    <div className="h-lvh bg-gradient-to-r from-purple-500 to-pink-500 ">
       <div className="h-1/6 ">
         <div className="bg-fuchsia-900">
           <nav className="list-none text-white flex justify-between items-center mx-5">
@@ -77,7 +77,7 @@ const Todo = () => {
           </nav>
         </div>
       </div>
-      <div className="container h-5/6 flex justify-center items-center flex-col">
+      <div className="h-4/6 flex justify-center items-center flex-col">
         <div className="taskinput flex justify-center items-center gap-4 bg-white rounded-3xl px-8 py-20 flex-col">
           <div className="flex justify-center items-center gap-2">
             <InputText
@@ -123,6 +123,14 @@ const Todo = () => {
               ))}
             </ul>
           </div>
+        </div>
+      </div>
+      <div className="h-1/6 text-white flex items-end justify-center">
+        <div className="py-4 bg-fuchsia-900 w-full flex items-center justify-center">
+          <p>
+            All rights reserved{" "}
+            <span className="text-cyan-200">@My task App</span>
+          </p>
         </div>
       </div>
     </div>

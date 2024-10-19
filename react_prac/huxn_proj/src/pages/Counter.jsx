@@ -4,7 +4,7 @@ import Button from "../components/Button";
 const Counter = () => {
   const [count, setCount] = useState(0);
   return (
-    <div className="container h-lvh flex justify-center items-center bg-black	flex-col">
+    <div className="h-lvh flex justify-center items-center bg-black	flex-col w-full">
       <h1 className="text-white	text-3xl pb-2">Simple Counter</h1>
       <h1 className="text-white	text-8xl pb-2">{count}</h1>
       <div className="flex items-center justify-center gap-2">
