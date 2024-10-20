@@ -2,9 +2,9 @@ import { MdAccountCircle } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 const Navbar = ({ title, logo, option, bgColor }) => {
   return (
-    <div className="h-1/6 ">
-      <div className={`${bgColor}`}>
-        <nav className="list-none text-white flex justify-between items-center mx-5">
+    <div className="h-1/6 text-white">
+      <div className={` ${bgColor}`}>
+        <nav className="list-none  flex justify-between items-center mx-5">
           <div className="logo flex justify-center items-center gap-2">
             <img src={logo} alt="Logo" className="h-8 w-8 rounded-md" />
             <p>{title}</p>
