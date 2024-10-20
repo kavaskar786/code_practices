@@ -1,16 +1,19 @@
-import TaskProvider from "./context/TaskContext";
-import ThemeProvider from "./context/ThemeContext";
-import Background from "./pages/Background";
-import Calculator from "./pages/Calculator";
-import Counter from "./pages/Counter";
-import HiddenSearchBar from "./pages/HiddenSearchBar";
-import Meals from "./pages/Meals";
-import Todo from "./pages/Todo";
+import Nav from "./navigation/Nav";
+import Products from "./products/Products";
+import Recommended from "./recommended/Recommended";
+// import TaskProvider from "./context/TaskContext";
+// import ThemeProvider from "./context/ThemeContext";
+// import Background from "./pages/Background";
+// import Calculator from "./pages/Calculator";
+// import Counter from "./pages/Counter";
+// import HiddenSearchBar from "./pages/HiddenSearchBar";
+// import Meals from "./pages/Meals";
+// import Todo from "./pages/Todo";
 
 const App = () => {
   return (
     <div className="font-sans	">
-      <Counter />
+      {/* <Counter />
       <TaskProvider>
         <Todo />
       </TaskProvider>
@@ -21,7 +24,10 @@ const App = () => {
       <ThemeProvider>
         <Background />
       </ThemeProvider>
-      <HiddenSearchBar />
+      <HiddenSearchBar /> */}
+      <Nav />
+      <Products />
+      <Recommended />
     </div>
   );
 };
