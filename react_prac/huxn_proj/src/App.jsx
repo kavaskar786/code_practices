@@ -1,6 +1,7 @@
 import Nav from "./navigation/Nav";
 import Products from "./products/Products";
 import Recommended from "./recommended/Recommended";
+import Sidebar from "./sidebars/Sidebar";
 import "./Style.css";
 // import TaskProvider from "./context/TaskContext";
 // import ThemeProvider from "./context/ThemeContext";
@@ -26,9 +27,10 @@ const App = () => {
         <Background />
       </ThemeProvider>
       <HiddenSearchBar /> */}
+      <Sidebar />
       <Nav />
-      <Products />
       <Recommended />
+      <Products />
     </div>
   );
 };

@@ -1,0 +1,7 @@
+.side-label-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.side-label-container input:checked ~ .checkmark {
+  background-color: #3f87f4;
+}
