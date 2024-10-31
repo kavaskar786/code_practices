@@ -1,0 +1,31 @@
+.side-label-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.side-label-container input:checked ~ .checkmark {
+  background-color: #3f87f4;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.side-label-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.side-label-container .checkmark::after {
+  top: 6.5px;
+  left: 6.5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.line {
+  margin-top: 3rem;
+  border-color: #f7f7f7;
+}
