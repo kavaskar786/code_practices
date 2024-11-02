@@ -10,8 +10,8 @@ const Sidebar = () => {
           <h1 className="mt-6">🛒</h1>
         </div>
         <Category />
-        <Color />
         <Price />
+        <Color />
       </div>
     </div>
   );

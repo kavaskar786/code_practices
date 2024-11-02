@@ -1,16 +1,14 @@
 import "./nav.css";
 import InputText from "../components/InputText";
-import { useState } from "react";
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
-const Nav = () => {
-  const [input, setInput] = useState("");
+const Nav = ({ query, handleInputChange }) => {
   return (
     <nav className="flex border-b-2 border-black items-center justify-around p-5 ml-7">
       <div className="nav-container">
         <InputText
-          value={input}
-          onChange={(val) => setInput(val)}
+          value={query}
+          onChange={handleInputChange}
           placeHolder="Enter you Search shoes"
         />
       </div>

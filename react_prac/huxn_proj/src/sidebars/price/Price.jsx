@@ -1,55 +1,43 @@
+import RadioInput from "../../components/RadioInput";
+import { useChange } from "../../App";
 import "./price.css";
 const Price = () => {
+  const { handleChange } = useChange();
   return (
     <div className="mprice">
       <h2 className="sidebar-title price-title text-xl font-normal	mb-5">
         Price
       </h2>
-      <label className="side-label-container  block relative	pl-9 mb-3 cursor-pointer select-none">
-        <input
-          type="radio"
-          name="test2"
-          className="absolute opacity-0 cursor-pointer"
-        />
-        <span className="checkmark absolute top-0 left-0 h-5 w-5 bg-white rounded-full"></span>
-        All
-      </label>
-      <label className="side-label-container  block relative	pl-9 mb-3 cursor-pointer select-none">
-        <input
-          type="radio"
-          name="test2"
-          className="absolute opacity-0 cursor-pointer"
-        />
-        <span className="checkmark absolute top-0 left-0 h-5 w-5 bg-white rounded-full"></span>
-        $0 - 50$
-      </label>
-      <label className="side-label-container  block relative	pl-9 mb-3 cursor-pointer select-none">
-        <input
-          type="radio"
-          name="test2"
-          className="absolute opacity-0 cursor-pointer"
-        />
-        <span className="checkmark absolute top-0 left-0 h-5 w-5 bg-white rounded-full"></span>
-        50$ - 100$
-      </label>
-      <label className="side-label-container  block relative	pl-9 mb-3 cursor-pointer select-none">
-        <input
-          type="radio"
-          name="test2"
-          className="absolute opacity-0 cursor-pointer"
-        />
-        <span className="checkmark absolute top-0 left-0 h-5 w-5 bg-white rounded-full"></span>
-        100 - 150%
-      </label>
-      <label className="side-label-container  block relative	pl-9 mb-3 cursor-pointer select-none">
-        <input
-          type="radio"
-          name="test2"
-          className="absolute opacity-0 cursor-pointer"
-        />
-        <span className="checkmark absolute top-0 left-0 h-5 w-5 bg-white rounded-full"></span>
-        over 150%
-      </label>
+      <RadioInput
+        handleChange={handleChange}
+        value={``}
+        title={`All`}
+        name={`test2`}
+      />
+      <RadioInput
+        handleChange={handleChange}
+        value={50}
+        title={`$0 - 50`}
+        name={`test2`}
+      />
+      <RadioInput
+        handleChange={handleChange}
+        value={100}
+        title={`$50 - 100`}
+        name={`test2`}
+      />
+      <RadioInput
+        handleChange={handleChange}
+        value={150}
+        title={`$100 - 150`}
+        name={`test2`}
+      />
+      <RadioInput
+        handleChange={handleChange}
+        value={200}
+        title={`$150 - 200`}
+        name={`test2`}
+      />
     </div>
   );
 };
