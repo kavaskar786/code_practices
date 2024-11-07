@@ -1,9 +1,12 @@
 // import Button from "./components/Button";
 // import User from "./components/User";
 
-import AdminInfo from "./components/AdminInfo";
-import StatePract from "./components/StatePract";
-import UserInfo from "./components/UserInfo";
+import Todo from "./components/Todo";
+
+// import AdminInfo from "./components/AdminInfo";
+// import StatePract from "./components/StatePract";
+// import UserInfo from "./components/UserInfo";
+// import UserProfile from "./components/UserProfile";
 
 const App = () => {
   return (
@@ -17,7 +20,7 @@ const App = () => {
         disabled
       /> */}
 
-      <p>UserInfo👇</p>
+      {/* <p>UserInfo👇</p>
       <UserInfo
         username="Alex"
         email="alex@gmail.com"
@@ -33,6 +36,8 @@ const App = () => {
         admin="yes"
       />
       <StatePract />
+      <UserProfile /> */}
+      <Todo />
     </>
   );
 };
