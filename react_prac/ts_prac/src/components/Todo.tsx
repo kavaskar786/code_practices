@@ -1,82 +1,71 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
-interface Task {
+type Task = {
+  id: number;
   title: string;
   description: string;
-  iscompleted: boolean;
-}
-
+  isCompleted: boolean;
+};
 const Todo = () => {
   const [todo, setTodo] = useState<Task[]>([]);
-  const [taskinput, setTaskInput] = useState<Task>({
+  const [task, setTask] = useState<Task>({
+    id: 1,
     title: "",
     description: "",
-    iscompleted: false,
+    isCompleted: false,
   });
-
+  const id = useRef<number>(1);
   const handleAddTask = () => {
-    if (taskinput.title && taskinput.description) {
-      setTodo([...todo, taskinput]);
-      setTaskInput({
-        title: "",
-        description: "",
-        iscompleted: false,
-      });
-    } else {
-      alert("Please provide both title and description");
-    }
+    setTodo([...todo, task]);
+    id.current = id.current + 1;
+    setTask({
+      id: id.current,
+      title: "",
+      description: "",
+      isCompleted: false,
+    });
   };
-
-  const handleCompleteClick = (index: number) => {
+  const handleComChng = (id: number) => {
     setTodo(
-      todo.map((task, i) =>
-        i === index ? { ...task, iscompleted: !task.iscompleted } : task
-      )
+      todo.map((t) => (t.id === id ? { ...t, isCompleted: !t.isCompleted } : t))
     );
   };
-
+  const handleDelete = (id: number) => {
+    setTodo(todo.filter((t) => t.id !== id));
+  };
   return (
     <div>
-      <h1>Todo</h1>
-      <div>
-        <label htmlFor="title">Title</label>
+      <div className="">
+        <label htmlFor="title">title</label>
         <input
           type="text"
-          value={taskinput.title}
           name="title"
-          placeholder="Enter task title"
-          onChange={(e) =>
-            setTaskInput({ ...taskinput, title: e.target.value })
-          }
+          value={task.title}
+          onChange={(e) => setTask({ ...task, title: e.target.value })}
         />
       </div>
-      <div>
-        <label htmlFor="description">Description</label>
+      <div className="">
+        <label htmlFor="description">description</label>
         <input
           type="text"
-          value={taskinput.description}
           name="description"
-          placeholder="Enter task description"
-          onChange={(e) =>
-            setTaskInput({ ...taskinput, description: e.target.value })
-          }
+          value={task.description}
+          onChange={(e) => setTask({ ...task, description: e.target.value })}
         />
       </div>
       <button onClick={handleAddTask}>Add Task</button>
-
-      <div>
-        {todo.map(({ title, description, iscompleted }, index) => (
+      <div className="">
+        {todo.map(({ id, title, description, isCompleted }, index) => (
           <div key={index}>
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <button onClick={() => handleCompleteClick(index)}>
-              {iscompleted ? "Completed" : "Mark as Complete"}
+            {`${id} ${title} ${description}`}{" "}
+            <button onClick={() => handleComChng(id)}>
+              {isCompleted ? "completed" : "Finish"}
             </button>
+            <button onClick={() => handleDelete(id)}>Delete</button>
           </div>
         ))}
       </div>
     </div>
   );
 };
-
 export default Todo;
