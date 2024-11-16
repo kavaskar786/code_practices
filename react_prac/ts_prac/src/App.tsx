@@ -1,7 +1,12 @@
 // import Button from "./components/Button";
 // import User from "./components/User";
 
-import FocusInput from "./components/FocusInput";
+// import Counter from "./components/Counter";
+import UserList from "./components/UserList";
+
+// import ContactForm from "./components/ContactForm";
+
+// import FocusInput from "./components/FocusInput";
 
 // import Todo from "./components/Todo";
 
@@ -40,7 +45,10 @@ const App = () => {
       <StatePract />
       <UserProfile /> */}
       {/* <Todo /> */}
-      <FocusInput />
+      {/* <FocusInput /> */}
+      {/* <ContactForm /> */}
+      {/* <Counter /> */}
+      <UserList />
     </>
   );
 };
