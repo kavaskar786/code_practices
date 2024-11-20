@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Flex, Text, Button } from "@radix-ui/themes";
+import { Flex, Text } from "@radix-ui/themes";
+import { Button } from "./ui/button";
 interface User {
   id: number;
   name: string;
@@ -63,8 +64,8 @@ const UserList = () => {
       <button className="btn btn-link">Link</button>
       <Flex direction="column" gap="2">
         <Text>Hello from Radix Themes :)</Text>
-        <Button>Let's go</Button>
       </Flex>
+      <Button>Learn more!!..</Button>
     </div>
   );
 };
