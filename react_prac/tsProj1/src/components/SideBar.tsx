@@ -8,7 +8,7 @@ const SideBar = () => {
         <div className="top">
           <li className="mb-2">
             <div className="flex items-center">
-              <FaHome className="mr-2 mb-3" size={18} />
+              <FaHome className="mr-2 mb-3" size={18} /> 
             </div>
           </li>
           <li className="mb-2">
