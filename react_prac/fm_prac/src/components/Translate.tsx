@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
+import { useState } from "react";
 
 const Translate = () => {
+  const [isFlipped, setIsFlipped] = useState<boolean>(false);
   return (
     <div className="flex items-center justify-center flex-row flex-wrap gap-4">
       <motion.div
@@ -62,7 +64,7 @@ const Translate = () => {
         className="h-20 w-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white m-3 ml-6"
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 2 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
       >
         <p>scaleY:2</p>
       </motion.div>
@@ -89,6 +91,19 @@ const Translate = () => {
         transition={{ duration: 3 }}
       >
         <p>skew:40</p>
+      </motion.div>
+      <motion.div
+        onClick={() => setIsFlipped(!isFlipped)}
+        className="h-20 w-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white m-3 ml-6"
+        variants={{
+          front: { rotate: 0 },
+          back: { rotate: 180 },
+        }}
+        initial={"front"}
+        animate={isFlipped ? "back" : "front"}
+        transition={{ duration: 0.6 }}
+      >
+        <p>click to rotate</p>
       </motion.div>
     </div>
   );
