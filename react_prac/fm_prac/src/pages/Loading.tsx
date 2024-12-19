@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 const Loading = () => {
   return (
-    <div className="h-screen flex items-center justify-center flex-col">
+    <div className="min-h-screen flex items-center justify-center flex-col">
       <h1 className="text-2xl font-semibold">Loading screen</h1>
       <div className="flex items-center justify-center mt-20 gap-2">
         {[...Array(3)].map((_, i) => (
