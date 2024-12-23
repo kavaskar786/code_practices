@@ -1,5 +1,5 @@
 import { spring } from "motion";
-import { addPointerInfo, motion } from "motion/react";
+import { motion } from "motion/react";
 
 const Gestures = () => {
   return (
