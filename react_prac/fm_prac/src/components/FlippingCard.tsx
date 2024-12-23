@@ -10,11 +10,11 @@ const FlippingCard = () => {
       onClick={() => setIsFlipped(!isFlipped)}
     >
       <motion.div
-        className={`w-32 h-16 rounded-lg shadow-lg transform-style-preserve-3d text-black`}
+        className={`w-[30vh] h-16 rounded-lg shadow-lg transform-style-preserve-3d text-black bg-[#fffaa4] flex items-center justify-center`}
         variants={varients}
         animate={isFlipped ? "back" : "front"}
       >
-        hello
+        <p>I am a flipping Card</p>
       </motion.div>
     </motion.div>
   );

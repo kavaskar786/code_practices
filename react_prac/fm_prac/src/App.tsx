@@ -1,4 +1,5 @@
 import FlippingCard from "./components/FlippingCard";
+import Gestures from "./components/Gestures";
 import Animations from "./pages/Animations";
 import Loading from "./pages/Loading";
 
@@ -8,6 +9,7 @@ const App = () => {
       <Animations />
       <Loading />
       <FlippingCard />
+      <Gestures />
     </div>
   );
 };
