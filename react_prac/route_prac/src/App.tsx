@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
-import Contacts from "./pages/Contacts";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Products" element={<Products />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Contacts" element={<Contacts />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
     </div>
   );
