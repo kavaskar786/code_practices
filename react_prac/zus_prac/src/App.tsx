@@ -1,7 +1,12 @@
+import Buttons from "./components/Buttons";
+import { useCounter } from "./Store";
+
 const App = () => {
+  const { count } = useCounter();
   return (
     <div>
-      <p className="text-3xl">hello</p>
+      <h1>Counter: {count}</h1>
+      <Buttons />
     </div>
   );
 };
