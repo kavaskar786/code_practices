@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
           <div className="">
             <NavLink to="charts">
-              <p>Highchartz</p>
+              <p>Highcharts</p>
             </NavLink>
           </div>
           <button className="md:hidden hover:underline-offset-2	 decoration-[#ffffff]">
