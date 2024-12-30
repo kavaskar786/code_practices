@@ -6,7 +6,6 @@ import {
 import App from "../App";
 import AGgrid from "../pages/AGgrid";
 import HignChartz from "../pages/HignChartz";
-
 const routes = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>

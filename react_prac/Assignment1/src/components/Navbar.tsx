@@ -6,22 +6,26 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="bg-[#141414c2] w-full text-white">
+    <div className="bg-[#212835] w-full text-white shadow-2xl">
       <div className="w-[85%] mx-auto flex items-center justify-between h-[8vh] ">
         <pre className="text-2xl font-semibold">Kavaskar's</pre>
         <div
           className={`absolute flex items-center justify-center flex-col gap-5 min-h-[60vh] left-0 ${
             isOpen ? "top-[9%]" : "top-[-100%]"
-          } w-full bg-[#141414c2] text-white md:static md:min-h-fit md:flex-row md:bg-[#00000000] `}
+          } w-full bg-[#475570] rounded-2xl text-white md:static md:min-h-fit md:flex-row md:bg-[#00000000] z-10`}
         >
-          <NavLink to="/">
-            <p>AG gird</p>
-          </NavLink>
+          <div className="">
+            <NavLink to="/">
+              <p>AG gird</p>
+            </NavLink>
+          </div>
           <NavLink to="charts">Highchartz</NavLink>
-          <button className="md:hidden">Sign Up/In</button>
+          <button className="md:hidden hover:underline-offset-2	 decoration-[#ffffff]">
+            Sign Up/In
+          </button>
         </div>
         <div className="">
-          <button className="hidden md:block">signup/in</button>
+          <button className="hidden md:block ">SignUp/In</button>
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden ">
             {isOpen ? <IoClose /> : <CiMenuBurger />}
           </button>
