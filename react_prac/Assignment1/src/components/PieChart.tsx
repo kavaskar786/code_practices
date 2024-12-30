@@ -7,7 +7,7 @@ const PieChart = () => {
       type: "pie",
     },
     title: {
-      text: "Pie Chart Example",
+      text: "Pie Chart",
     },
     series: [
       {

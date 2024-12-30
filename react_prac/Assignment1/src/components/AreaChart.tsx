@@ -1,36 +1,35 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-const ColumnChart = () => {
+const AreaChart = () => {
   const options = {
     chart: {
-      type: "column",
+      type: "area",
     },
     title: {
-      text: "Column Chart",
+      text: "Area Chart",
     },
     xAxis: {
-      categories: ["Product A", "Product B", "Product C"],
+      categories: ["Q1", "Q2", "Q3", "Q4"],
     },
     yAxis: {
       title: {
-        text: "Units Sold",
+        text: "Revenue ($K)",
       },
     },
     series: [
       {
         name: "2023",
-        data: [50, 70, 90],
+        data: [50, 75, 100, 125],
       },
       {
         name: "2024",
-        data: [60, 80, 100],
+        data: [60, 80, 110, 130],
       },
-      { name: "2025", data: [70, 90, 110] },
     ],
   };
 
   return <HighchartsReact highcharts={Highcharts} options={options} />;
 };
 
-export default ColumnChart;
+export default AreaChart;
