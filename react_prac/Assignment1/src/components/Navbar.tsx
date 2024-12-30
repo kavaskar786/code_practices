@@ -19,7 +19,11 @@ const Navbar = () => {
               <p>AG gird</p>
             </NavLink>
           </div>
-          <NavLink to="charts">Highchartz</NavLink>
+          <div className="">
+            <NavLink to="charts">
+              <p>Highchartz</p>
+            </NavLink>
+          </div>
           <button className="md:hidden hover:underline-offset-2	 decoration-[#ffffff]">
             Sign Up/In
           </button>

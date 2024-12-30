@@ -1,3 +1,4 @@
+//practice of useCallback()
 import React, { useCallback, useState } from "react";
 
 function Parent() {
@@ -5,7 +6,7 @@ function Parent() {
 
   const handleClick = useCallback(() => {
     console.log("Button clicked! Count is fixed:", count);
-  }, []); // Empty dependency array
+  }, []);
 
   return (
     <div>
