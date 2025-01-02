@@ -1,18 +1,14 @@
 // import Flex from "./components/Flex";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
-// import Navbar from "./components/Navbar";
-import Person from "./components/Person";
-import Person2 from "./components/Person2";
-import Person3 from "./components/Person3";
+
+import NavBarTest from "./components/NavBarTest";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <div>
+      <NavBarTest />
       <Home />
-      <Person />
-      <Person2 />
-      <Person3 />
       <Footer />
     </div>
   );

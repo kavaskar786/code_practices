@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 const NavBarTest = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -14,6 +15,10 @@ const NavBarTest = () => {
           <div className="logo cursor-pointer font-semibold	text-white">
             START BOOTSTRAP
           </div>
+        </div>
+        <div className="flex item-center justify-center">
+          <NavLink to={}></NavLink>
+          <NavLink to={}></NavLink>
         </div>
         <div
           className={`md:static md:min-h-fit md:bg-[#00000000] md:w-auto absolute bg-[#00000094] min-h-[60vh] left-0  ${
