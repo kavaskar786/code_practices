@@ -18,7 +18,7 @@ const Gestures = () => {
       </motion.div>
       <motion.div
         className="w-28 h-28 rounded-3xl bg-white flex items-center justify-center"
-        whileTap={{ scale: 1.1 }}
+        whileTap={{ scale: [0.95, 1, 1.1, 1] }}
         transition={{
           ease: "easeInOut",
           duration: 0.8,
@@ -28,6 +28,21 @@ const Gestures = () => {
       >
         <p>Tap me</p>
       </motion.div>
+      {/* <motion.div
+        className="w-28 h-28 rounded-3xl bg-white flex items-center justify-center"
+        whileTap={{ scale: [0.95, 1, 1.1, 1] }}
+        drag
+        dragConstraints={{ top: -50, right: 50, bottom: 50, left: -50 }}
+        dragElastic
+        transition={{
+          ease: "easeInOut",
+          duration: 0.8,
+          type: spring,
+          stiffness: 300,
+        }}
+      >
+        <p>Drag me</p>
+      </motion.div> */}
     </div>
   );
 };
