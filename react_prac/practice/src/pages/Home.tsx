@@ -4,7 +4,7 @@ import Person3 from "../components/Person3";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="mb-11">
       <div className="h-[88vh] bg-gradient-to-b from-[#f11b70] to-[#fe6b00] overflow-hidden	">
         <div className="flex items-center justify-center flex-col h-[79vh] gap-14">
           <div className="flex items-center justify-center flex-col gap-6">

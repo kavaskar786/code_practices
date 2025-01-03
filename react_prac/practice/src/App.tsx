@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 
 import NavBarTest from "./components/NavBarTest";
 import Home from "./pages/Home";
-import Search from "./Routes/Search";
+import Search from "./pages/Search";
 
 const App = () => {
   return (
