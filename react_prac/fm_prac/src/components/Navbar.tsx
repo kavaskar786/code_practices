@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const navItems = ["/", "Gestrues", "Loading", "Animation"];
+  const navItems = ["/", "Gestrues", "Loading", "Animation", "Stagger"];
   return (
     <div className="bg-gradient-to-r from-slate-900 to-slate-400 h-[8vh] w-[100%] flex items-center justify-center text-white">
       <div className={` flex items-center justify-between w-[90%] mx-auto  `}>

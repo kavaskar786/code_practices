@@ -6,6 +6,7 @@ import FlippingCardMain from "./pages/FlippingCardMain";
 import Loading from "./pages/Loading";
 import { motion, AnimatePresence } from "motion/react";
 import Gestures from "./components/Gestures";
+import Stagger from "./pages/Stagger";
 
 const App = () => {
   const pageVariants = {
@@ -32,13 +33,14 @@ const App = () => {
           exit="out"
           variants={pageVariants}
           transition={pageTransition}
-          className="relative overflow-hidden w-full"
+          className="relative  w-full"
         >
           <Routes>
             <Route path="/" element={<FlippingCardMain />} />
             <Route path="/Gestrues" element={<Gestures />} />
             <Route path="/Loading" element={<Loading />} />
             <Route path="/Animation" element={<Animations />} />
+            <Route path="/Stagger" element={<Stagger />} />
           </Routes>
         </motion.div>
       </AnimatePresence>
