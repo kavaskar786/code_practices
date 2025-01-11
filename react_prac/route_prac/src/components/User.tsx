@@ -7,6 +7,7 @@ interface test {
 }
 const User = () => {
   const { id, name, email }: test = useLoaderData();
+
   return (
     <div>
       <p>{id}</p>

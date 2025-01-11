@@ -48,6 +48,7 @@ const App = () => {
       <Loading />
       <FlippingCardMain />
       <GestuesMain /> */}
+      {/* <MotionValues /> */}
     </div>
   );
 };
