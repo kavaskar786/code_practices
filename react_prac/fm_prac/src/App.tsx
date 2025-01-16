@@ -1,12 +1,7 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Animations from "./pages/Animations";
-import FlippingCardMain from "./pages/FlippingCardMain";
-// import GestuesMain from "./pages/GestuesMain";
-import Loading from "./pages/Loading";
+
 import { motion, AnimatePresence } from "motion/react";
-import Gestures from "./components/Gestures";
-import Stagger from "./pages/Stagger";
 
 const App = () => {
   const pageVariants = {
@@ -35,13 +30,7 @@ const App = () => {
           transition={pageTransition}
           className="relative  w-full"
         >
-          <Routes>
-            <Route path="/" element={<FlippingCardMain />} />
-            <Route path="/Gestrues" element={<Gestures />} />
-            <Route path="/Loading" element={<Loading />} />
-            <Route path="/Animation" element={<Animations />} />
-            <Route path="/Stagger" element={<Stagger />} />
-          </Routes>
+          <Outlet />
         </motion.div>
       </AnimatePresence>
       {/* <Animations />
