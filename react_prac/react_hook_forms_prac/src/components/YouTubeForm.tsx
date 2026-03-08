@@ -36,11 +36,13 @@ export const YouTubeForm = () => {
           {...register("email", {
             required: "Email is required",
             pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" },
-            validate: (fieldValue) => {
-              return (
-                fieldValue.endsWith("@gmail.com") ||
-                "Only gmail.com emails are allowed"
-              );
+            validate: {
+              notAdmin: (fieldValue) =>
+                fieldValue !== "admin@gmail.com" ||
+                "Enter a different email address",
+              notBlackListed: (fieldValue) =>
+                !fieldValue.endsWith("baddomain.com") ||
+                "This domain is not supported",
             },
           })}
         />
