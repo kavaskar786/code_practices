@@ -1,5 +1,7 @@
+import { YouTubeForm } from "./components/YouTubeForm";
+
 const App = () => {
-  return <div>App</div>;
+  return <YouTubeForm />;
 };
 
 export default App;
