@@ -5,6 +5,10 @@ type youtubeUserFormType = {
   username: string;
   email: string;
   channel: string;
+  social: {
+    twitter: string;
+    facebook: string;
+  };
 };
 
 export const YouTubeForm = () => {
@@ -18,6 +22,10 @@ export const YouTubeForm = () => {
       username: "",
       email: "",
       channel: "",
+      social: {
+        twitter: "",
+        facebook: "",
+      },
     },
   });
   const handleYoutubeUserFormSubmit = (data: youtubeUserFormType) => {
@@ -61,7 +69,24 @@ export const YouTubeForm = () => {
           {...register("channel", { required: "Channel is required" })}
         />
         <p>{errors.channel?.message}</p>
-        <button type="submit">Submit</button>
+
+        <label htmlFor="twitter">Twitter:</label>
+        <input
+          type="text"
+          id="twitter"
+          {...register("social.twitter", {
+            required: "Twitter handle is required",
+          })}
+        />
+
+        <label htmlFor="facebook">Facebook:</label>
+        <input
+          type="text"
+          id="facebook"
+          {...register("social.facebook", {
+            required: "Facebook handle is required",
+          })}
+        />
       </form>
       <DevTool control={control} />
     </>
