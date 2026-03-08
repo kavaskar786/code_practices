@@ -9,6 +9,7 @@ type youtubeUserFormType = {
     twitter: string;
     facebook: string;
   };
+  phoneNumbers: string[];
 };
 
 export const YouTubeForm = () => {
@@ -26,6 +27,7 @@ export const YouTubeForm = () => {
         twitter: "",
         facebook: "",
       },
+      phoneNumbers: ["", ""],
     },
   });
   const handleYoutubeUserFormSubmit = (data: youtubeUserFormType) => {
@@ -87,6 +89,26 @@ export const YouTubeForm = () => {
             required: "Facebook handle is required",
           })}
         />
+
+        <label htmlFor="phone1">Phone 1:</label>
+        <input
+          type="text"
+          id="phone1"
+          {...register("phoneNumbers.0", {
+            required: "Phone number is required",
+          })}
+        />
+
+        <label htmlFor="phone2">Phone 2:</label>
+        <input
+          type="text"
+          id="phone2"
+          {...register("phoneNumbers.1", {
+            required: "Phone number is required",
+          })}
+        />
+
+        <button type="submit">Submit</button>
       </form>
       <DevTool control={control} />
     </>
