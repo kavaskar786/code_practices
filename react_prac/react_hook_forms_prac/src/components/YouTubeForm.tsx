@@ -13,7 +13,13 @@ export const YouTubeForm = () => {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<youtubeUserFormType>();
+  } = useForm<youtubeUserFormType>({
+    defaultValues: {
+      username: "",
+      email: "",
+      channel: "",
+    },
+  });
   const handleYoutubeUserFormSubmit = (data: youtubeUserFormType) => {
     console.log("submitted", data);
   };
