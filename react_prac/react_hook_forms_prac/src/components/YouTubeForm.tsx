@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { useFieldArray, useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
 type youtubeUserFormType = {
@@ -10,6 +10,9 @@ type youtubeUserFormType = {
     facebook: string;
   };
   phoneNumbers: string[];
+  phNumbers: {
+    number: string;
+  }[];
 };
 
 export const YouTubeForm = () => {
@@ -28,8 +31,19 @@ export const YouTubeForm = () => {
         facebook: "",
       },
       phoneNumbers: ["", ""],
+      phNumbers: [
+        {
+          number: "",
+        },
+      ],
     },
   });
+
+  const { fields, append, remove } = useFieldArray({
+    name: "phNumbers",
+    control,
+  });
+
   const handleYoutubeUserFormSubmit = (data: youtubeUserFormType) => {
     console.log("submitted", data);
   };
@@ -107,6 +121,26 @@ export const YouTubeForm = () => {
             required: "Phone number is required",
           })}
         />
+
+        <label>List of phone numbers</label>
+        {fields.map((field, index) => (
+          <div key={field.id}>
+            <input
+              type="text"
+              {...register(`phNumbers.${index}.number` as const, {
+                required: "Phone number is required",
+              })}
+            />
+            {index > 0 && (
+              <button type="button" onClick={() => remove(index)}>
+                Remove
+              </button>
+            )}
+          </div>
+        ))}
+        <button type="button" onClick={() => append({ number: "" })}>
+          Add phone number
+        </button>
 
         <button type="submit">Submit</button>
       </form>
